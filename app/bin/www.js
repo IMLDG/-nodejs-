@@ -1,6 +1,6 @@
 "use strict";
 
-const app=require("../src/main");
+const app=require("../main");
 const PORT=3000;
 
 //라우팅
