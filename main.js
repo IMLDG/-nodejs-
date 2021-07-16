@@ -6,7 +6,7 @@ const app=express();
 
 const PORT=3000;
 //라우팅
-const home = require("./routes/home/main");//상대적으로 명시해주어야 함(여기서는 main.js 기준)
+const home = require("./routes/home");//상대적으로 명시해주어야 함(여기서는 main.js 기준)
 
 //앱 세팅
 app.set("views","./views");
