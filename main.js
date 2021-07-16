@@ -12,3 +12,5 @@ module.exports=app;
 
 //node.js에서의 index.js, app.js, server.js 차이
 //=>https://velog.io/@yoounhk/node.js에서의-index.js-app.js-server.js-차이
+
+//pakage.json은 개발에 있어서 굉장히 유용한 것 같음. 기본적인 사용법 반드시 숙지하기
