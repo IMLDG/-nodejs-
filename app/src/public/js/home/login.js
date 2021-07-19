@@ -21,5 +21,15 @@ function login(){
             "Content-Type" : "application/json"
         },
         body : JSON.stringify(req)//JSON 객체는 문자열로 감싸져있음. => "{ "..." : ".." }"
-    }).then((res)=> res.json()).then((res)=> console.log(res));
+    }).then((res)=> res.json())
+      .then((res)=> {
+            if(res.success){
+                location.href="/";//로그인 성공시 main 화면으로 이동
+            }else{
+                alert(res.msg);
+            }
+      })
+      .catch((err) => {
+          console.error(new Error("로그인 중 에러 발생"));
+      });
 };

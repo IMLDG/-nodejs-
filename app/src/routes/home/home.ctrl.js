@@ -23,8 +23,7 @@ const process = {
             const idx = user.id.indexOf(id);
             if(user.password[idx] == password){
                 return res.json({
-                    success : true,
-                    msg : "로그인 성공"
+                    success : true
                 });
             }
         }
