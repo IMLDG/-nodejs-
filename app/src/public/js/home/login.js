@@ -21,5 +21,5 @@ function login(){
             "Content-Type" : "application/json"
         },
         body : JSON.stringify(req)//JSON 객체는 문자열로 감싸져있음. => "{ "..." : ".." }"
-    });
+    }).then((res)=> res.json()).then((res)=> console.log(res));
 };
