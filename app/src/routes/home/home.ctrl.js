@@ -19,23 +19,11 @@ const process = {
         const user = new User(req.body);
         const response = user.login();
         return res.json(response);
-        // return res.json(response);
-        // const id = req.body.id;
-        // const password = req.body.password;
-
-        // const users = UserStorage.getUsers("id","password");
-        // if(users.id.includes(id)){
-        //     const idx = users.id.indexOf(id);
-        //     if(users.password[idx] == password){
-        //         return res.json({
-        //             success : true
-        //         });
-        //     }
-        // }
-        // return res.json({
-        // success : false,
-        // msg : "로그인에 실패하셨습니다.",
-        // });
+    },
+    register : (req,res) => {
+        const user = new User(req.body);
+        const response = user.register();
+        return res.json(response);
     }
 };
 

@@ -11,11 +11,13 @@ const registerBtn = document.querySelector("button");
 registerBtn.addEventListener("click", register);//Event의 종류 => https://m.blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=qbxlvnf11&logNo=220877806711&categoryNo=24&proxyReferer=
 
 function register(){
+    if(!id.value)  return alert("아이디를 입력해 주세요.");
+    if(password.value != confirmPassword.value)  return alert("비밀번호가 일치하지 않습니다.");
+
     const req = {
         id : id.value,
         name : name.value,
-        password : password.value,
-        confirmPassword : confirmPassword.value
+        password : password.value
     }
     fetch("/register",{
         method : "POST",//생성

@@ -4,7 +4,8 @@ class UserStorage{
     //# => private한 변수를 의미
      static #users = {
         id : ["woorimIT", "김팀장", "나팀장"],
-        password : ["1234", "1234", "123456"]
+        password : ["1234", "1234", "123456"],
+        name : ["우리밋", "김씨", "나씨"]
     };
     
     static getUsers(...fields) {
@@ -28,6 +29,14 @@ class UserStorage{
         }, {});
 
         return userInfo;
+    }
+
+    static save(userInfo){
+        const user = this.#users;
+        user.id.push(userInfo.id);
+        user.password.push(userInfo.password);
+        user.name.push(userInfo.name);
+        return { success : true };
     }
 }
 
